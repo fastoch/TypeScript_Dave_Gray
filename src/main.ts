@@ -1,10 +1,11 @@
-let username = 'fastoch pustoch'
-console.log(username)
-let a: number = 12
-let b: number = 6
-let c: number = a / b
-console.log(c)
-console.log(typeof c)
-let d = c * b
-console.log(d);
+// type is inferred
+let myName = 'fastoch'
+
+// type is explicit
+let myAge: number = 41
+
+// we can also specify the variable type and assign the value afterwards
+let friend: string
+friend = 'Billy'
+
 

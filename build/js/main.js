@@ -1,10 +1,8 @@
 "use strict";
-let username = 'fastoch pustoch';
-console.log(username);
-let a = 12;
-let b = 6;
-let c = a / b;
-console.log(c);
-console.log(typeof c);
-let d = c * b;
-console.log(d);
+// type is inferred
+let myName = 'fastoch';
+// type is explicit
+let myAge = 41;
+// we can also specify the variable type and assign the value afterwards
+let friend;
+friend = 'Billy';
