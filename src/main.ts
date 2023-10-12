@@ -8,4 +8,7 @@ let myAge: number = 41
 let friend: string
 friend = 'Billy'
 
+const sum = (a: number, b: number) => {
+  return a + b
+}
 

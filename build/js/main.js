@@ -6,3 +6,6 @@ let myAge = 41;
 // we can also specify the variable type and assign the value afterwards
 let friend;
 friend = 'Billy';
+const sum = (a, b) => {
+    return a + b;
+};
