@@ -9,3 +9,13 @@ friend = 'Billy';
 const sum = (a, b) => {
     return a + b;
 };
+let album;
+let regex = /\w+/g;
+let stringArr = ['one', 'hey', 'Dave'];
+let guitars = ['Strat', 'Les Paul', 5150];
+let mixedData = ['EVH', 1984, true];
+stringArr[0] = 'John';
+stringArr.push('fastoch'); // adds an item at the end 
+guitars.unshift(1616); // adds an item at the beginning
+console.log(stringArr);
+console.log(guitars);
