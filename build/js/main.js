@@ -36,3 +36,11 @@ const greetGuitarist = (guitarist) => {
 };
 // call the function and log the output to the console
 console.log(greetGuitarist(evh));
+var Grade;
+(function (Grade) {
+    Grade[Grade["U"] = 1] = "U";
+    Grade[Grade["D"] = 2] = "D";
+    Grade[Grade["C"] = 3] = "C";
+    Grade[Grade["B"] = 4] = "B";
+    Grade[Grade["A"] = 5] = "A";
+})(Grade || (Grade = {}));

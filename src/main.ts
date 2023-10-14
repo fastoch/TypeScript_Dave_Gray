@@ -54,3 +54,10 @@ const greetGuitarist = (guitarist: Guitarist) => {
 // call the function and log the output to the console
 console.log(greetGuitarist(evh));
 
+enum Grade {
+  U = 1,
+  D,
+  C,
+  B,
+  A
+}
