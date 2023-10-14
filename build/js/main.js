@@ -26,3 +26,13 @@ const exampleObj = {
     prop1: 'Cool',
     prop2: true,
 };
+let evh = {
+    name: 'Eddie Van Halen',
+    active: false,
+    albums: [1982, 'Thriller']
+};
+const greetGuitarist = (guitarist) => {
+    return `Ladies & gentlemen, please welcome ${guitarist.name}!`;
+};
+// call the function and log the output to the console
+console.log(greetGuitarist(evh));

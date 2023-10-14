@@ -36,3 +36,21 @@ const exampleObj = {
   prop2: true,
 }
 
+interface Guitarist  {
+  name: string,
+  active?: boolean,
+  albums: (string | number)[]
+}
+
+let evh: Guitarist = {
+  name: 'Eddie Van Halen',
+  active: false,
+  albums: [1982, 'Thriller']
+}
+
+const greetGuitarist = (guitarist: Guitarist) => {
+  return `Ladies & gentlemen, please welcome ${guitarist.name}!`
+}
+// call the function and log the output to the console
+console.log(greetGuitarist(evh));
+
