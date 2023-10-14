@@ -36,5 +36,3 @@ const exampleObj = {
   prop2: true,
 }
 
-exampleObj.prop2 = false
-
