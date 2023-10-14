@@ -19,3 +19,11 @@ stringArr.push('fastoch'); // adds an item at the end
 guitars.unshift(1616); // adds an item at the beginning
 console.log(stringArr);
 console.log(guitars);
+let myTuple = ['Dave', 12, false];
+let myObj;
+myObj = [];
+const exampleObj = {
+    prop1: 'Cool',
+    prop2: true,
+};
+exampleObj.prop2 = false;

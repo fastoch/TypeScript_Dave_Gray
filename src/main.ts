@@ -26,5 +26,15 @@ guitars.unshift(1616) // adds an item at the beginning
 console.log(stringArr);
 console.log(guitars);
 
+let myTuple: [string, number, boolean] = ['Dave', 12, false]
 
+let myObj: object
+myObj = []
+
+const exampleObj = {
+  prop1: 'Cool',
+  prop2: true,
+}
+
+exampleObj.prop2 = false
 
