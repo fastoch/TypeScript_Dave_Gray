@@ -40,3 +40,19 @@ class Guitarist {
 }
 const Page = new Guitarist('Jimmy', 'guitar');
 console.log(Page.play('strums'));
+/////////////////////////////////////
+class Peeps {
+    static getCount() {
+        return Peeps.count;
+    }
+    constructor(name) {
+        this.name = name;
+        this.name = name;
+        this.id = ++Peeps.count; // we pre-increment so that first id is 1
+    }
+}
+Peeps.count = 0;
+const John = new Peeps('John');
+const David = new Peeps('David');
+const Laura = new Peeps('Laura');
+console.log(Peeps.count);

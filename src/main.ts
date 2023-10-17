@@ -75,5 +75,18 @@ class Peeps {
   static getCount(): number {
     return Peeps.count
   }
+
+  public id: number
+
+  constructor(public name: string) {
+    this.name = name
+    this.id = ++Peeps.count  // we pre-increment so that first id is 1
+  }
 }
+
+const John = new Peeps('John')
+const David = new Peeps('David')
+const Laura = new Peeps('Laura')
+
+console.log(Peeps.count);
 
