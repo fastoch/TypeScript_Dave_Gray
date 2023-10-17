@@ -67,3 +67,13 @@ class Guitarist implements Musician {
 const Page = new Guitarist('Jimmy', 'guitar')
 console.log(Page.play('strums'));
 
+/////////////////////////////////////
+
+class Peeps {
+  static count: number = 0
+
+  static getCount(): number {
+    return Peeps.count
+  }
+}
+
