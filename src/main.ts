@@ -88,5 +88,31 @@ const John = new Peeps('John')
 const David = new Peeps('David')
 const Laura = new Peeps('Laura')
 
-console.log(Peeps.count);
+console.log(Peeps.count); // 3
 
+/////////////////////////////
+
+class Bands {
+  private dataState: string[]
+
+  constructor() {
+    this.dataState = []
+  }
+
+  public get data(): string[] {
+    return this.dataState
+  }
+
+  public set data(value: string[]) {
+    // we check if value is an array and if it only contains strings
+    if (Array.isArray(value) && value.every(el => typeof el === 'string')) {
+      this.dataState = value
+    } else throw new Error('Parameter is not an array of strings')
+  } 
+}
+
+const MyBands = new Bands()
+MyBands.data = ['Blink 182', 'Meshuggah', 'Placebo', 'Muse']
+console.log(MyBands.data);
+MyBands.data = [...MyBands.data, 'ZZ Top'] // adding one band
+console.log(MyBands.data);
