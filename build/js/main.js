@@ -29,3 +29,14 @@ class WebDev extends Coder {
 const fastoch = new WebDev('Arch Linux', 'Fabrice', 'AC/DC', 41);
 console.log((fastoch.computer));
 console.log(fastoch.getLang());
+class Guitarist {
+    constructor(name, instrument) {
+        this.name = name;
+        this.instrument = instrument;
+    }
+    play(action) {
+        return `${this.name} ${action} the ${this.instrument}.`;
+    }
+}
+const Page = new Guitarist('Jimmy', 'guitar');
+console.log(Page.play('strums'));
