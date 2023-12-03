@@ -32,3 +32,9 @@ for (const key in student) {
 Object.keys(student).map(key => {
     console.log(`${key}: ${student[key]}`);
 });
+const logStudentKey = (student, key) => {
+    console.log(`${key}: ${student[key]}`);
+};
+logStudentKey(student, 'name');
+logStudentKey(student, 'GPA');
+logStudentKey(student, 'classes');

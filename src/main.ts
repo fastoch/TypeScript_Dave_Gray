@@ -48,6 +48,14 @@ for (const key in student) {
 
 // just an alternate version of the previous code
 Object.keys(student).map(key => {
-  console.log(`${key}: ${student[key as keyof Student]}`)
+  console.log(`${key}: ${student[key as keyof typeof student]}`)
 })
+
+const logStudentKey = (student: Student, key: keyof Student): void => {
+  console.log(`${key}: ${student[key]}`);
+} 
+
+logStudentKey(student, 'name');
+logStudentKey(student, 'GPA');
+logStudentKey(student, 'classes');
 
