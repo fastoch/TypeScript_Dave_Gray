@@ -20,3 +20,15 @@ const todaysNet = (transactions) => {
     return total;
 };
 console.log(todaysNet(todaysTransactions)); // 35
+const student = {
+    name: 'Douglas',
+    GPA: 10,
+    classes: [100, 200]
+};
+for (const key in student) {
+    console.log(`${key}: ${student[key]}`);
+}
+// just an alternate version of the previous code
+Object.keys(student).map(key => {
+    console.log(`${key}: ${student[key]}`);
+});

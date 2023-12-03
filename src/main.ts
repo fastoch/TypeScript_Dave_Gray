@@ -29,4 +29,25 @@ const todaysNet = (transactions: TransactionObj): number => {
 
 console.log(todaysNet(todaysTransactions)); // 35
 
+interface Student {
+  // [index: string]: number | string | number[] | undefined
+  name: string,
+  GPA: number,
+  classes?: number[] // optional property
+}
+
+const student: Student = {
+  name: 'Douglas',
+  GPA: 10,
+  classes: [100, 200]
+}
+
+for (const key in student) {
+  console.log(`${key}: ${student[key as keyof Student]}`);
+}
+
+// just an alternate version of the previous code
+Object.keys(student).map(key => {
+  console.log(`${key}: ${student[key as keyof Student]}`)
+})
 
