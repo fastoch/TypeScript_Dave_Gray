@@ -38,3 +38,11 @@ const logStudentKey = (student, key) => {
 logStudentKey(student, 'name');
 logStudentKey(student, 'GPA');
 logStudentKey(student, 'classes');
+const monthlyIncomes = {
+    salary: 500,
+    bonus: 100,
+    sidehustle: 250
+};
+for (const revenue in monthlyIncomes) {
+    console.log(monthlyIncomes[revenue]);
+}
