@@ -1,76 +1,23 @@
-// interface TransactionObj {
-//   Pizza: number,
-//   Books: number,
-//   Job: number
-// }
+const stringEcho = (arg: string): string => arg
 
-// index signature
-interface TransactionObj {
-  [index: string]: number
+// same function that works with any type, not only the string type
+const echo = <T>(arg: T): T => arg
+
+const isObject = <T>(arg: T): boolean => {
+  return (typeof arg === 'object' && !Array.isArray(arg) && arg !== null)
 }
 
-const todaysTransactions: TransactionObj = {
-  Pizza: -10,
-  Books: -5,
-  Job: 50
+const toto = "toto"
+const titi = 123
+const tutu = ["bibi", "bobo"]
+const tyty = null
+const tata = {
+  animal: "dog",
+  age: 16
 }
 
-console.log(todaysTransactions.Pizza); // -10
-console.log(todaysTransactions['Pizza']); // -10
-
-// Dynamically accessing the data 
-const todaysNet = (transactions: TransactionObj): number => {
-  let total = 0
-  for (const transaction in transactions) {
-    total += transactions[transaction]
-  }
-  return total
-}
-
-console.log(todaysNet(todaysTransactions)); // 35
-
-interface Student {
-  // [index: string]: number | string | number[] | undefined
-  name: string,
-  GPA: number,
-  classes?: number[] // optional property
-}
-
-const student: Student = {
-  name: 'Douglas',
-  GPA: 10,
-  classes: [100, 200]
-}
-
-for (const key in student) {
-  console.log(`${key}: ${student[key as keyof Student]}`);
-}
-
-// just an alternate version of the previous code
-Object.keys(student).map(key => {
-  console.log(`${key}: ${student[key as keyof typeof student]}`)
-})
-
-const logStudentKey = (student: Student, key: keyof Student): void => {
-  console.log(`${key}: ${student[key]}`);
-} 
-
-logStudentKey(student, 'name');
-logStudentKey(student, 'GPA');
-logStudentKey(student, 'classes');
-
-////////////////////////////////////////////////////////////////////////
-
-type Streams = 'salary' | 'bonus' | 'sidehustle'
-type Incomes = Record<Streams, number | string>
-
-const monthlyIncomes: Incomes = {
-  salary: 500,
-  bonus: 100,
-  sidehustle: 250
-} 
-
-for (const revenue in monthlyIncomes) {
-  console.log(monthlyIncomes[revenue as keyof Incomes]);
-}
-
+console.log(isObject(toto)); // false
+console.log(isObject(titi)); // false
+console.log(isObject(tutu)); // false
+console.log(isObject(tyty)); // false
+console.log(isObject(tata)); // true
