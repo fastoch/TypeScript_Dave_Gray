@@ -293,3 +293,22 @@ const usersArray = [
 ];
 console.log(getUsersProperty(usersArray, "email"));
 console.log(getUsersProperty(usersArray, "username"));
+class StateObject {
+    constructor(value) {
+        this.data = value;
+    }
+    get state() {
+        return this.data;
+    }
+    set state(value) {
+        this.data = value;
+    }
+}
+const store = new StateObject("David");
+console.log(store.state);
+store.state = "Fabrice";
+console.log(store.state);
+const store2 = new StateObject([16]);
+console.log(store2.state);
+store2.state = [32, "fastoch", true];
+console.log(store2.state);
