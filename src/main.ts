@@ -35,6 +35,7 @@ const hexColorMap: Record<string, string> = {
 
 type Students = "Sara" | "Kelly"
 type LetterGrades = "A" | "B" | "C" | "D" | "U"
+
 const finalGrades: Record<Students, LetterGrades> = {
   Sara: "A",
   Kelly: "B"
@@ -68,5 +69,27 @@ const preview: AssignPreview = {
 
 // Exclude and Extract
 
+type adjustedGrade = Exclude<LetterGrades, "U">
 
+type highGrades = Extract<LetterGrades, "A" | "B">
+
+// NonNullable
+
+type AllPossibleGrades = 'Dave' | 'John' | null | undefined
+type NamesOnly = NonNullable<AllPossibleGrades>
+
+// ReturnType
+
+const createNewAssign = (title: string, points: number) => {
+  return { title, points }
+}
+
+type NewAssign = ReturnType<typeof createNewAssign>
+
+const tsAssign: NewAssign = createNewAssign("Utility types", 100)
+console.log(tsAssign);
+
+// Parameters
+
+type AssignParams = Parameters<typeof createNewAssign>
 
