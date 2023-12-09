@@ -14,4 +14,4 @@ const recordAssignment = (assign) => {
     return assign;
 };
 const assignGraded = updateAssignment(assign1, { grade: 95 });
-const assignVerified = Object.assign(Object.assign({}, assignGraded), { verified: true });
+recordAssignment(Object.assign(Object.assign({}, assignGraded), { verified: true }));
